@@ -24,11 +24,10 @@
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 10)>;
+			pinmux = <SPI0_CSN_P10>, <SPI0_SCK_P13>, <SPI0_TX_P11>;
         };
         group2 {
-            psels = <NRF_PSEL(SPIM_MISO, 1, 11)>;
+            pinmux = <SPI0_RX_P12>;
             input-enable;
         };
     };
